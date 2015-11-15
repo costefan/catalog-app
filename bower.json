@@ -1,0 +1,25 @@
+{
+  "name": "catalog-app",
+  "homepage": "https://github.com/costefan/catalog-app",
+  "authors": [
+    "costefan <costefan@yandex.ru>"
+  ],
+  "description": "",
+  "main": "bower.json",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15"
+  }
+}
