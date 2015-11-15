@@ -1,4 +1,11 @@
-== Catalog app
+Catalog app
+
+bundle install
+rake db:migrate
+
+rake db:reset
+rake db:populate
+rake test:prepare
 
 Things app may cover:
 
@@ -8,4 +15,5 @@ Things app may cover:
 
 * Rest
 
+* Rake task
 
