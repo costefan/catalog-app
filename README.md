@@ -1,11 +1,12 @@
 Catalog app
 
-bundle install
-rake db:migrate
+*bundle install
+*rake bower:install
+*rake db:migrate
 
-rake db:reset
-rake db:populate
-rake test:prepare
+*rake db:reset
+*rake db:populate
+*rake test:prepare
 
 Things app may cover:
 
