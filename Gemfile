@@ -30,6 +30,8 @@ gem 'angular_rails_csrf'
 
 gem 'turbolinks'
 
+gem 'bower-rails'
+
 gem 'faker'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -51,6 +51,7 @@ GEM
     bootstrap-sass (3.3.5.1)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.3.0)
+    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.0)
     coffee-rails (4.1.0)
@@ -129,7 +130,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-    sprockets (2.12.3)
+    sprockets (2.12.4)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -162,6 +163,7 @@ DEPENDENCIES
   angular-rails-templates
   angular_rails_csrf
   bootstrap-sass
+  bower-rails
   byebug
   faker
   jbuilder (~> 2.0)

@@ -6,17 +6,8 @@ app.controller('MainCtrl', [
     'items',
     function($scope, items) {
         $scope.items = items.items;
-        $scope.addItem = function () {
-            if (!$scope.title || $scope.title === '') {
-                return;
-            }
-            items.create({
-
-                title: $scope.title,
-                price: $scope.price
-
-            });
-            $scope.title = '';
-            $scope.price = '';
-        };
+        $scope.itemsPerPage = 5;
+        $scope.currentPage = 1;
+        $scope.totalItems = $scope.items.length;
+        $scope.maxSize = 5;
     }]);

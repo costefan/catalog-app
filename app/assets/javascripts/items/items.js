@@ -12,11 +12,6 @@ app.factory('items', [
                 angular.copy(data, o.items)
             });
         };
-        o.create = function(item) {
-            return $http.post('/items.json', item).success(function(data){
-                o.items.push(data);
-            });
-        };
         o.get = function(id) {
             return $http.get('/items/' + id + '.json').then(function(res){
                 return res.data;

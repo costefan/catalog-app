@@ -1,15 +1,15 @@
 'use strict';
-var app = angular.module('catalogApp', ['ui.router']);
+var app = angular.module('catalogApp', ['ui.router', 'templates', 'ui.bootstrap']);
 
 
-    app.config([
-      '$stateProvider',
-      '$urlRouterProvider',
-      function($stateProvider, $urlRouterProvider) {
+app.config([
+    '$stateProvider',
+    '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
         $stateProvider
             .state('home', {
               url: '/home',
-              templateUrl: '/home.html',
+              templateUrl: 'home/_home.html',
               controller: 'MainCtrl',
                 resolve: {
                     itemPromise: ['items', function(items){
@@ -19,7 +19,7 @@ var app = angular.module('catalogApp', ['ui.router']);
             })
             .state('items', {
               url: '/items/{id}',
-              templateUrl: '/items.html',
+              templateUrl: 'items/_items.html',
               controller: 'ItemsCtrl',
                 resolve: {
                     item: ['$stateParams', 'items', function($stateParams, items) {
@@ -30,6 +30,3 @@ var app = angular.module('catalogApp', ['ui.router']);
 
         $urlRouterProvider.otherwise('home');
       }]);
-
-
-
