@@ -19,7 +19,4 @@ app.controller('MainCtrl', [
             $scope.title = '';
             $scope.price = '';
         };
-        $scope.incrementUpvotes = function(item) {
-            items.upvote(item);
-        };
     }]);

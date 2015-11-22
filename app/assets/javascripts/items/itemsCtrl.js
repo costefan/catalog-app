@@ -17,7 +17,4 @@ app.controller('ItemsCtrl', [
             });
             $scope.body = '';
         };
-        $scope.incrementUpvotes = function(comment){
-            items.upvoteComment(item, comment);
-        };
     }]);

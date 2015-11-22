@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115144158) do
+ActiveRecord::Schema.define(version: 20151122090514) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "body"
-    t.integer  "upvotes"
     t.integer  "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,9 +25,8 @@ ActiveRecord::Schema.define(version: 20151115144158) do
   create_table "items", force: :cascade do |t|
     t.string   "title"
     t.string   "link"
-    t.integer  "upvotes",    default: 0
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.integer  "price"
   end
 

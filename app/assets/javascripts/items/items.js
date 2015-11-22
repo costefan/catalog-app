@@ -17,12 +17,6 @@ app.factory('items', [
                 o.items.push(data);
             });
         };
-        o.upvote = function(item) {
-            return $http.put('/items/' + item.id + '/upvote.json')
-                .success(function(data){
-                    item.upvotes += 1;
-                });
-        };
         o.get = function(id) {
             return $http.get('/items/' + id + '.json').then(function(res){
                 return res.data;
@@ -30,12 +24,6 @@ app.factory('items', [
         };
         o.addComment = function(id, comment) {
             return $http.post('/items/' + id + '/comments.json', comment);
-        };
-        o.upvoteComment = function(item, comment) {
-            return $http.put('/items/' + item.id + '/comments/'+ comment.id + '/upvote.json')
-                .success(function(data){
-                    comment.upvotes += 1;
-                });
         };
         return o;
     }
