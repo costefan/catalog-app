@@ -2,6 +2,7 @@ div(class="page-header")
         h3
           span
            | {{item.title}}
+        | {{item.description}}
 
 div ng-repeat="comment in item.comments"
     span(style="font-size:20px; margin-left:10px;") {{comment.body}}

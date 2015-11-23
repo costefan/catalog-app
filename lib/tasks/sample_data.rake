@@ -6,8 +6,10 @@ namespace :db do
     40.times do
       title = Faker::Commerce.product_name
       price = 20 + Random.rand(11)
+      description = Faker::Lorem.sentence
       Item.create!(title: title,
-                  price: price)
+                   description: description,
+                   price: price)
     end
   end
 end
