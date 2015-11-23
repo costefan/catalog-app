@@ -33,6 +33,8 @@ gem 'turbolinks'
 gem 'bower-rails'
 
 gem 'faker'
+
+gem 'slim'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

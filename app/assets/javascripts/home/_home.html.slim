@@ -1,0 +1,12 @@
+div(class="page-header")
+    h1 Catalog Items
+div(ng-repeat="item in items.slice(((currentPage-1) * itemsPerPage), ((currentPage) * itemsPerPage))")
+    br
+    a(ng-show="item.link" href="{{item.link}}") {{item.title}}
+    span(ng-hide="item.link")  {{item.title}}
+    a(href="#/items/{{item.id}}")
+       |  Comments
+
+    |  Price:  {{item.price}}
+
+pagination(total-items="totalItems" items-per-page="itemsPerPage" max-size="maxSize" ng-model="currentPage" ng-change="pageChanged()")

@@ -1,0 +1,17 @@
+div(class="page-header")
+        h3
+          span
+           | {{item.title}}
+
+div ng-repeat="comment in item.comments"
+    span(style="font-size:20px; margin-left:10px;") {{comment.body}}
+
+
+form(ng-submit="addComment()" style="margin-top:30px;")
+        h3 Add a new comment
+        div(class="form-group")
+            input(type="text" class="form-control" placeholder="Comment" ng-model="body")
+        button(type="submit" class="btn btn-primary") Post
+hr
+a(href="#/home/" class="btn btn-primary")
+    span(class="glyphicon glyphicon-menu-left" aria-hidden="true") Back
